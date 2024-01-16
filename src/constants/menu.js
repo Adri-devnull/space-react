@@ -1,24 +1,24 @@
-const { v4 } = require('uuid');
+import { v4 } from 'uuid';
 
 export const MENU_INFO = [
 	{
 		id: v4(),
 		name: '00 HOME',
-		route: '/'
+		path: '/'
 	},
 	{
 		id: v4(),
 		name: '01 DESTINATION',
-		route: '/destination'
+		path: '/destination'
 	},
 	{
 		id: v4(),
 		name: '02 CREW',
-		route: '/crew'
+		path: '/crew'
 	},
 	{
 		id: v4(),
-		name: 'TECHNOLOGY',
-		route: '/technology'
+		name: '03 TECHNOLOGY',
+		path: '/technology'
 	}
 ];
