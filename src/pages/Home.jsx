@@ -1,25 +1,31 @@
-import { StyledHomeMain, StyledHomeTitle } from './styles';
+import {
+	StyledHomeButton,
+	StyledHomeContainer,
+	StyledHomeMain,
+	StyledHomeParagraph,
+	StyledHomeSubTitle,
+	StyledHomeTexts,
+	StyledHomeTitle
+} from './styles';
 
 const Home = () => {
 	return (
 		<StyledHomeMain>
-			<div>
-				<div>
-					<StyledHomeTitle>SO, YOU WANT TO TRAVEL TO</StyledHomeTitle>
-					<h1>SPACE</h1>
-					<p>
+			<StyledHomeContainer>
+				<StyledHomeTexts>
+					<StyledHomeSubTitle>SO, YOU WANT TO TRAVEL TO</StyledHomeSubTitle>
+					<StyledHomeTitle>SPACE</StyledHomeTitle>
+					<StyledHomeParagraph>
 						Let’s face it; if you want to go to space, you might as well
 						genuinely go to outer space and not hover kind of on the edge of it.
 						Well sit back, and relax because we’ll give you a truly out of this
 						world experience!
-					</p>
-				</div>
+					</StyledHomeParagraph>
+				</StyledHomeTexts>
 				<div>
-					<button>
-						<h2>EXPLORE</h2>
-					</button>
+					<StyledHomeButton>EXPLORE</StyledHomeButton>
 				</div>
-			</div>
+			</StyledHomeContainer>
 		</StyledHomeMain>
 	);
 };

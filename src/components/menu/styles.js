@@ -19,19 +19,22 @@ const StyledBar = styled.div`
 `;
 
 const StyledList = styled.ul`
+	font-family: 'Barlow Condensed', sans-serif;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 40px;
+	gap: 80px;
 	list-style: none;
-	background-color: red;
+	background: linear-gradient(to right, #0d1b2a, rgba(83, 92, 104, 0.7));
 	height: 96px;
 	width: 100%;
 `;
 
 const StyledLink = styled(Link)`
+	font-size: 1.1em;
 	text-decoration: none;
 	color: #fff;
+	letter-spacing: 0.3em;
 `;
 
 export { StyledNav, StyledBar, StyledList, StyledLink, StyledImage };
