@@ -66,8 +66,8 @@ const StyledHomeButton = styled.button`
 	}
 `;
 
-const StyledDestinationMain = styled.main`
-	background-image: url('/assets/images/destination/background-destination-desktop.jpg');
+const StyledTechnologyMain = styled.main`
+	background-image: url('/assets/images/technology/background-technology-desktop.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
@@ -86,5 +86,5 @@ export {
 	StyledHomeTexts,
 	StyledHomeButton,
 	StyledHomeParagraph,
-	StyledDestinationMain
+	StyledTechnologyMain
 };

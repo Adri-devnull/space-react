@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 const StyledNav = styled.nav`
 	position: absolute;
-	background-color: transparent;
 	display: flex;
 	align-items: center;
 	width: 100%;
@@ -25,7 +24,8 @@ const StyledList = styled.ul`
 	justify-content: center;
 	gap: 80px;
 	list-style: none;
-	background: linear-gradient(to right, #0d1b2a, rgba(83, 92, 104, 0.7));
+	background: rgba(255, 255, 255, 0.04);
+	backdrop-filter: blur(40.774227142333984px);
 	height: 96px;
 	width: 100%;
 `;
