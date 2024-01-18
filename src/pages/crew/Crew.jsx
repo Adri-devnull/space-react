@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { CREW_INFO } from '../../constants/crewInfo';
 import { CREW_TABS } from '../../constants/crewTabs';
 import {
@@ -13,9 +12,10 @@ import {
 	StyledCrewText,
 	StyledTabsContainer
 } from './styles';
+import { useTabs } from '../../hooks/useTabs';
 
 const Crew = () => {
-	const [info, setInfo] = useState('COMMANDER');
+	const { info, setInfo, getDestinationInfo } = useTabs('COMMANDER');
 	return (
 		<StyledCrewMain>
 			<div>
@@ -31,7 +31,7 @@ const Crew = () => {
 							{CREW_TABS.map((tab, index) => (
 								<StyledCrewButton
 									key={tab.id}
-									onClick={() => getCrewInfo(setInfo, tab.name)}
+									onClick={() => getDestinationInfo(setInfo, tab.name)}
 								></StyledCrewButton>
 							))}
 						</StyledTabsContainer>
@@ -43,10 +43,6 @@ const Crew = () => {
 			</div>
 		</StyledCrewMain>
 	);
-};
-
-const getCrewInfo = (setInfo, value) => {
-	setInfo(value);
 };
 
 export default Crew;

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-export const useTabs = () => {
-	const [info, setInfo] = useState('MOON');
+export const useTabs = value => {
+	const [info, setInfo] = useState(value);
 
 	const getDestinationInfo = (setInfo, tabName) => {
 		setInfo(tabName);

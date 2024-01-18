@@ -18,7 +18,7 @@ import { StyledImage } from '../../components/menu/styles';
 import { useTabs } from '../../hooks/useTabs';
 
 const Destination = () => {
-	const { info, setInfo, getDestinationInfo } = useTabs();
+	const { info, setInfo, getDestinationInfo } = useTabs('MOON');
 	return (
 		<StyledDestinationMain>
 			<div>

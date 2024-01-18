@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { TECHNOLOGY_TABS } from '../../constants/technologyTabs';
 import { TECHNOLOGY_INFO } from '../../constants/technologyInfo';
 import {
@@ -12,9 +11,10 @@ import {
 	SytledSpaceLaunch,
 	SytledSubtitle
 } from './styles';
+import { useTabs } from '../../hooks/useTabs';
 
 const Technology = () => {
-	const [info, setInfo] = useState('LAUNCH_VEHICLE');
+	const { info, setInfo, getDestinationInfo } = useTabs('LAUNCH_VEHICLE');
 	return (
 		<StyledTechnologyMain>
 			<div>
@@ -24,7 +24,7 @@ const Technology = () => {
 						{TECHNOLOGY_TABS.map((tab, index) => (
 							<StyledButton
 								key={tab.id}
-								onClick={() => getTechnologyInfo(setInfo, tab.name)}
+								onClick={() => getDestinationInfo(setInfo, tab.name)}
 							>
 								{index + 1}
 							</StyledButton>
@@ -42,10 +42,6 @@ const Technology = () => {
 			</div>
 		</StyledTechnologyMain>
 	);
-};
-
-const getTechnologyInfo = (setInfo, value) => {
-	setInfo(value);
 };
 
 export default Technology;
