@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { DESTINATION_TABS } from '../../constants/destinationTabs';
 import { DESTINATION_INFO } from '../../constants/destinationInfo';
 import {
@@ -8,6 +7,7 @@ import {
 	StyledStatsContainer,
 	StyledStatsInfo,
 	StyledStatsTitle,
+	StyledSubtitle,
 	StyledTabsContainer,
 	StyledText,
 	StyledTexts,
@@ -15,14 +15,14 @@ import {
 	SytledContainer
 } from './styles';
 import { StyledImage } from '../../components/menu/styles';
+import { useTabs } from '../../hooks/useTabs';
 
 const Destination = () => {
-	const [info, setInfo] = useState('MOON');
-
+	const { info, setInfo, getDestinationInfo } = useTabs();
 	return (
 		<StyledDestinationMain>
 			<div>
-				<h2>{DESTINATION_INFO[info].title}</h2>
+				<StyledSubtitle>{DESTINATION_INFO[info].title}</StyledSubtitle>
 				<SytledContainer>
 					<StyledImage>
 						<img src={DESTINATION_INFO[info].image} alt='' />
@@ -64,10 +64,6 @@ const Destination = () => {
 			</div>
 		</StyledDestinationMain>
 	);
-};
-
-const getDestinationInfo = (setInfo, tabName) => {
-	setInfo(tabName);
 };
 
 export default Destination;

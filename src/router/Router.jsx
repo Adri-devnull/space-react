@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout';
 import Home from '../pages/Home';
 import Destination from '../pages/destination/Destination';
 import Crew from '../pages/crew/Crew';
-import Technology from '../pages/Technology';
+import Technology from '../pages/technology/Technology';
 
 const Router = () => {
 	return (

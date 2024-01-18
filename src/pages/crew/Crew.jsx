@@ -1,33 +1,44 @@
 import { useState } from 'react';
 import { CREW_INFO } from '../../constants/crewInfo';
 import { CREW_TABS } from '../../constants/crewTabs';
-import { StyledCrewContainer, StyledCrewMain } from './styles';
+import {
+	StyledCrewButton,
+	StyledCrewContainer,
+	StyledCrewContainerImg,
+	StyledCrewContainerTexts,
+	StyledCrewMain,
+	StyledCrewName,
+	StyledCrewOcupation,
+	StyledCrewSubtitle,
+	StyledCrewText,
+	StyledTabsContainer
+} from './styles';
 
 const Crew = () => {
 	const [info, setInfo] = useState('COMMANDER');
 	return (
 		<StyledCrewMain>
 			<div>
-				<h2>{CREW_INFO[info].title}</h2>
 				<StyledCrewContainer>
-					<div>
-						<h2>{CREW_INFO[info].occupation}</h2>
-						<h1>{CREW_INFO[info].name}</h1>
-						<p>{CREW_INFO[info].text}</p>
-						<div>
+					<StyledCrewContainerTexts>
+						<StyledCrewSubtitle>{CREW_INFO[info].title}</StyledCrewSubtitle>
+						<StyledCrewOcupation>
+							{CREW_INFO[info].occupation}
+						</StyledCrewOcupation>
+						<StyledCrewName>{CREW_INFO[info].name}</StyledCrewName>
+						<StyledCrewText>{CREW_INFO[info].text}</StyledCrewText>
+						<StyledTabsContainer>
 							{CREW_TABS.map((tab, index) => (
-								<button
+								<StyledCrewButton
 									key={tab.id}
 									onClick={() => getCrewInfo(setInfo, tab.name)}
-								>
-									{tab.name}
-								</button>
+								></StyledCrewButton>
 							))}
-						</div>
-					</div>
-					<div>
+						</StyledTabsContainer>
+					</StyledCrewContainerTexts>
+					<StyledCrewContainerImg>
 						<img src={CREW_INFO[info].image} alt='' />
-					</div>
+					</StyledCrewContainerImg>
 				</StyledCrewContainer>
 			</div>
 		</StyledCrewMain>

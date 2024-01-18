@@ -66,18 +66,6 @@ const StyledHomeButton = styled.button`
 	}
 `;
 
-const StyledTechnologyMain = styled.main`
-	background-image: url('/assets/images/technology/background-technology-desktop.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-family: 'Barlow Condensed', sans-serif;
-	color: #fff;
-`;
-
 export {
 	StyledHomeMain,
 	StyledHomeSubTitle,
@@ -85,6 +73,5 @@ export {
 	StyledHomeTitle,
 	StyledHomeTexts,
 	StyledHomeButton,
-	StyledHomeParagraph,
-	StyledTechnologyMain
+	StyledHomeParagraph
 };

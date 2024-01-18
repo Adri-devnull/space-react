@@ -7,6 +7,9 @@ h1, h2, h3 {
 	margin: 0;
 }
 
+img {
+	max-width: 100%; 
+	height: auto; 
+  }
 
-/* font-family: 'Barlow Condensed', sans-serif; */
-/* font-family: 'Bellefair', serif; */
+

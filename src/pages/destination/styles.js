@@ -90,6 +90,17 @@ const StyledTabsContainer = styled.div`
 	gap: 30px;
 `;
 
+const StyledSubtitle = styled.h2`
+	color: #fff;
+	font-family: 'Barlow Condensed';
+	font-size: 28px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 4.725px;
+	margin-top: 40px;
+`;
+
 export {
 	StyledDestinationMain,
 	SytledContainer,
@@ -102,5 +113,6 @@ export {
 	StyledStatsTitle,
 	StyledStatsInfo,
 	StyledButtonTab,
-	StyledTabsContainer
+	StyledTabsContainer,
+	StyledSubtitle
 };
